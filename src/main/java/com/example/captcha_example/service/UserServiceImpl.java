@@ -3,6 +3,7 @@ package com.example.captcha_example.service;
 import com.example.captcha_example.entity.User;
 import com.example.captcha_example.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+        return userRepository.findAll(Sort.by("id"));
     }
 
     @Override

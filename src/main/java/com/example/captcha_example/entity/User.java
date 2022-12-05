@@ -1,6 +1,5 @@
 package com.example.captcha_example.entity;
 
-
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -23,6 +22,7 @@ public class User {
     private Integer id;
     private String name;
     private String email;
+    private String phone;
 
     //user kiritgan string qiymat
     @Transient
@@ -34,4 +34,5 @@ public class User {
     //rasmi
     @Transient
     private String realCaptcha;
+
 }
